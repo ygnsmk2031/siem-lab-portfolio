@@ -192,5 +192,5 @@ A note on the results: Event 4625 has two account names, the subject (who asked 
 
 ## Files
 
-- [incident-report.md](incident-report.md): the scan written up as an incident
+- [incident-report.md](incident-report.md): the brute-force attempt written up as an incident
 - [troubleshooting.md](troubleshooting.md): problems I hit and how I fixed them
