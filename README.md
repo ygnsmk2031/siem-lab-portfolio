@@ -8,19 +8,20 @@ Every lab here is a **home lab**. I build it on my own machine or a trial cloud 
 
 | Lab | SIEM | Status | What it covers |
 |---|---|---|---|
-| [Lab 1](lab1-splunk/) | Splunk Enterprise | Done | Sysmon on Windows, Universal Forwarder, detecting an Nmap scan, real-time alert |
-| [Lab 2](lab2-sentinel/) | Microsoft Sentinel | Done, write-up in progress | |
+| [Lab 1](lab1-splunk/) | Splunk Enterprise | Done | Sysmon and Security logs on Windows, Universal Forwarder, detecting a port scan and an SMB brute-force attempt, with alerts |
+| [Lab 2](lab2-sentinel/) | Microsoft Sentinel | Planned | |
 | [Lab 3](lab3-wazuh/) | Wazuh | In progress | |
 
-## Tools used
+## Tools used (Lab 1)
 
 - Splunk Enterprise and Splunk Universal Forwarder (SPL)
 - Sysmon
 - VirtualBox (NAT Network)
-- Kali Linux, Nmap
+- Kali Linux, Nmap, netexec
 - Windows 10, Ubuntu Server, UFW
-- Microsoft Sentinel (KQL)
 - MITRE ATT&CK for mapping detections
+
+Microsoft Sentinel (KQL) and Wazuh will be added as Labs 2 and 3 are built.
 
 ## Skills shown
 
@@ -32,12 +33,14 @@ Every lab here is a **home lab**. I build it on my own machine or a trial cloud 
 
 ## How to read this repo
 
-Each lab folder has the same files:
+A finished lab folder (Lab 1 so far) has:
 
 - `README.md`: architecture diagram, setup steps in order, detections table, MITRE mapping and what I learned
 - `incident-report.md`: one detection written up as if it were a real incident
 - `troubleshooting.md`: problems I actually hit and how I fixed them
 - `screenshots/`: evidence, referenced from the files above
+
+Labs 2 and 3 are placeholders for now.
 
 If you only have five minutes, start with the architecture diagram and detections table in [Lab 1](lab1-splunk/README.md), then read the [Lab 1 incident report](lab1-splunk/incident-report.md).
 

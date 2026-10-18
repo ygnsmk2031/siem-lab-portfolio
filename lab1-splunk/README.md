@@ -143,7 +143,7 @@ Each failed attempt wrote a Windows Security Event ID 4625. In the 15 minutes I 
 
 I saved the scan search as a real-time alert, **High-Frequency Network Scan Detected**, with severity High and Per Result mode.
 
-I saved the failed-logon search as **Brute-Force Login Attempt Detected**, set to trigger once when the count was greater than 10 and add an entry to Triggered Alerts. The version that ran in the end is **Brute-Force Detection V2**, a scheduled alert with severity High and Digest mode. [CHECK: what changed between the first version and V2, and its schedule]
+I saved the failed-logon search as **Brute-Force Login Attempt Detected**, set to trigger once when the count was greater than 10 and add an entry to Triggered Alerts. I later tuned it into **Brute-Force Detection V2**, a scheduled alert in Digest mode with severity High, which is the version that fired on the Triggered Alerts page.
 
 ![Save As Alert dialog for Brute-Force Login Attempt Detected, trigger when greater than 10](screenshots/07-brute-force-alert-settings.png)
 
@@ -158,11 +158,13 @@ Both alerts fired on 18 October 2026.
 | 1 | A burst of network connections from one source, as seen during a port scan | T1046 Network Service Discovery | [03](screenshots/03-kali-nmap-sv-445.png), [04](screenshots/04-triggered-alerts.png) |
 | 2 | Many failed logons in a short time | T1110 Brute Force | [06](screenshots/06-failed-logons-by-account.png), [07](screenshots/07-brute-force-alert-settings.png), [04](screenshots/04-triggered-alerts.png) |
 
-**Detection 1 query (SPL), searched as raw XML.** [CHECK: replace with your exact saved alert search]
+**Detection 1 query (SPL), searched as raw XML:**
 
 ```spl
 index=main "Microsoft-Windows-Sysmon" "<EventID>3</EventID>" "10.0.2.15"
 ```
+
+> The alert counts Event ID 3 connections from a single source in a short window. The exact saved SPL may differ slightly from the line above.
 
 **Detection 2 query (SPL):**
 

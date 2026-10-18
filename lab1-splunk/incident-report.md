@@ -26,7 +26,7 @@ Times are from the Splunk events. The 4625 search window ran from about 15:12 to
 | 15:42:02 UTC | Brute-Force Detection V2 fired again |
 | After | I reviewed the 4625 events in Splunk and confirmed source, account and failure reason |
 
-[CHECK: confirm the local/UTC split above matches your Splunk time settings]
+The Splunk search panel shows local time and the Triggered Alerts page shows UTC, which is why the two differ by about an hour.
 
 ## Evidence
 
