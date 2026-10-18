@@ -122,7 +122,7 @@ I saved the search as a real-time alert called **High-Frequency Network Scan Det
 |---|---|---|---|---|
 | 1 | Many network connections from one source in a short time, as seen during a TCP connect scan | See below | T1046 Network Service Discovery | [05](screenshots/05-splunk-search-event-id-3.png), [06](screenshots/06-triggered-alert.png) |
 
-Detection 1, searched as raw XML:
+Detection 1, searched as raw XML. [CHECK: replace with your exact saved alert search and threshold]
 
 ```spl
 index=main "Microsoft-Windows-Sysmon" "<EventID>3</EventID>"
@@ -142,7 +142,7 @@ index=main "Microsoft-Windows-Sysmon" "<EventID>3</EventID>"
 
 - A detection is only as good as what gets logged. The SwiftOnSecurity config is a good default, but it hid the exact traffic I wanted to see. I had to read the config to work out why.
 - Host firewalls change what a scan looks like. With the firewall on, the handshakes didn't complete, so there was nothing for Sysmon to record as a connection.
-- I don't need parsed fields to search. When the events came in as raw XML, I searched the text directly and used `rex` to pull values out.
+- I don't need parsed fields to search. When the events came in as raw XML, I searched the text directly.
 - It helps to say the pipeline out loud: attacker action, Sysmon, inputs.conf, outputs.conf, port 9997, index, alert. When something broke, I checked each step in that order.
 
 ## Files

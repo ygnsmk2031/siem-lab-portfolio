@@ -28,4 +28,4 @@ sysmon64.exe -c C:\lab-sysmon.xml
 
 **What happened:** The events reached Splunk, but there were no parsed fields like `SourceIp` or `DestinationPort` to search on.
 
-**Fix:** I searched the raw XML text directly, for example `"<EventID>3</EventID>"` and the attacker IP, and used `rex` to pull values out when I needed them. Installing the Splunk Add-on for Sysmon would add proper field extractions. That's a later improvement.
+**Fix:** I searched the raw XML text directly, for example `"<EventID>3</EventID>"` and the attacker IP. Installing the Splunk Add-on for Sysmon would add proper field extractions. That's a later improvement.
