@@ -9,8 +9,8 @@ Every lab here is a **home lab**. I build it on my own machine or a trial cloud 
 | Lab | SIEM | Status | What it covers |
 |---|---|---|---|
 | [Lab 1](lab1-splunk/) | Splunk Enterprise | Done | Sysmon and Security logs on Windows, Universal Forwarder, detecting a port scan and an SMB brute-force attempt, with alerts |
-| [Lab 2](lab2-sentinel/) | Microsoft Sentinel | Planned | |
-| [Lab 3](lab3-wazuh/) | Wazuh | In progress | |
+| [Lab 2](lab2-sentinel/) | Microsoft Sentinel | In progress | |
+| [Lab 3](lab3-wazuh/) | Wazuh | Planned | |
 
 ## Tools used (Lab 1)
 

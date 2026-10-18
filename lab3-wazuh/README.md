@@ -1,1 +1,1 @@
-# Lab 3: Wazuh, in progress
+# Lab 3: Wazuh, planned

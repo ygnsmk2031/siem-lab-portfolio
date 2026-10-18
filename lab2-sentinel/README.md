@@ -1,1 +1,1 @@
-# Lab 2: Microsoft Sentinel, planned
+# Lab 2: Microsoft Sentinel, in progress
